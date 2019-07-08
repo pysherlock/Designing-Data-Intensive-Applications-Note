@@ -62,10 +62,9 @@ The final twist of the Twitter anecdote:
   * Desribing Performance
  Batch processing: Throughput - the number of records can be processed per second
  
- Online systems: service's response time
- Average is not a good metric for response time. Use ***percentiles***, ***median***
+ Online systems: service's response time. Average is not a good metric for response time. Use ***percentiles***, ***median***
  
- p50: half of user requests are served in less than one thershold response time. The threshold is p50
+ ***p50***: half of user requests are served in less than one thershold response time. The threshold is p50
  p95: 95%, p99: 99%
  
 ***Tail latencies***: high percentiles of response times are important because they affect users' experience
@@ -73,6 +72,5 @@ For example, the customers with slowest request are often those who have made ma
  
 ***Queueing delays***: small number of slow requests hold up the processing of subsequent requests => ***head-of-line blocking***. 
   So Even if those subsequent requests are fast to process on theserver, the client will see a slow overall response time due to the time waiting for the prior request to complete.
- 
   
-  
+3. Maintainability
